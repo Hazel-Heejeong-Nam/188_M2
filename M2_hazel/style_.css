@@ -1,0 +1,249 @@
+.camerabox {
+    position : relative;
+    width : 197px;
+    height : 167px;
+    margin : auto 0cm;
+    float : left;
+    border : 2px solid black;
+    overflow : hidden;
+}
+
+.phone {
+    position : relative;
+    overflow : hidden;
+    width: 6.6cm;
+    height: 13.2cm;
+    margin: auto 0cm;
+    float: left;
+}
+
+.phone > img {
+    position : absolute;
+    top: 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.phone > #text-display {
+    position: absolute;
+    text-align: left;
+    height: 4.4cm;
+    width: 5.2cm;
+    
+    top: 1cm;
+    right: 0.7cm;
+
+    line-height :30px; /*don't know what it means*/
+    font-size: medium;
+    z-index: 1;
+    border : 1px solid rgb(211, 211, 211);
+    background-color: rgb(229, 229, 229);
+    border-radius: 3%;
+    caret-color: black;
+}
+
+.phone > .alertbox {
+    position : absolute;
+    text-align: center;
+    height: 0.5cm;
+    border-radius: 10px 10px 10px 10px;
+    top : 5.8cm;
+    left : 1cm;
+    background: rgba(0,0,0,.4);
+    color : white;
+    z-index: 4;
+    font-size: small;
+    display: none;
+    padding: 0.1cm 0.5cm;
+}
+
+.phone > .tabbox {
+    position : absolute;
+    text-align: center;
+    height: 0.3cm;
+    bottom : 1.8cm;
+    left : 40%;
+    color : red;
+    background-color: rgb(255, 231, 231);
+    font-size: small;
+    font-weight: bold;
+    display: none;
+    padding: 0cm 0.2cm 0.3cm 0.2cm;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.tabbox.showtab {
+    display: block;
+}
+
+.alertbox.show {
+    display: block;
+}
+
+/* keypads*/
+
+.phone > .keypads-box {
+    position : absolute;
+    height : 3.8cm;
+    width : 5.2cm;
+    bottom : 2.5cm;
+    right : 0.7cm;
+    z-index: 1;
+}
+.keypad-row1 {
+    position : absolute;
+    height : 0.8cm;
+    width : 5.2cm;
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    z-index: 3;
+}
+
+.keypad-row2 {
+    position : absolute;
+    height : 0.8cm;
+    width : 4.8cm;
+    top : 1cm;
+    right : 0.2cm;
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+.keypad-row3 {
+    position : absolute;
+    height : 0.8cm;
+    width : 3.8cm;
+    top : 2cm;
+    right : 0.6cm;
+
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    z-index: 3;
+}
+
+.keypad-row4 {
+    position : absolute;
+    height : 0.8cm;
+    width : 5.2cm;
+    top : 3cm;
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    z-index: 3;
+}
+
+#key {
+    width : 0.47cm;
+    height : 0.8cm;
+    text-align: center;
+    font-size: 80%;
+    background-color: black;
+    color : rgb(255, 255, 255);
+    border-radius : 15%;
+    font-weight: bold;  
+}
+.phone > .input-buttons {
+    position : absolute;
+    height: 1cm;
+    width : 5.2cm;
+    bottom : 0.5cm;
+    right : 0.7cm;
+
+    z-index:1;
+    display: grid;
+    grid-template-columns: 1.4cm 1.4cm 1.4cm 1.4cm;
+    align-items: center;
+}
+
+
+/* each joystick*/
+
+.input-buttons > div {
+    position : relative;
+    overflow : hidden;
+    width: 1cm;
+    height: 1cm;
+    margin: 0;
+    box-shadow: 0.1cm 0.1cm 0.1cm 0.1cm rgba(206, 206, 206,1);
+}
+
+.input-buttons > div > img {
+    position : absolute;
+    top: 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.input-buttons > div > button {
+    width: 0.33cm;
+    height: 0.33cm;
+    border : 1px solid rgb(0, 0, 0);
+    opacity : 0;
+    z-index : 4;
+}
+/*joystick 1 */
+.button1 > #row1 {
+    position : absolute;
+    top : 0.33cm;
+    left: 0cm;
+}
+
+.button1 > #row2 {
+    position : absolute;
+    top : 0cm;
+    left: 0.33cm;
+}
+
+.button1 > #row3 {
+    position : absolute;
+    top : 0.33cm;
+    left: 0.66cm;
+}
+
+.button1 > #row4 {
+    position : absolute;
+    top : 0.66cm;
+    left: 0.33cm;
+}
+
+/* joysticks 2,3,4 */
+.input-buttons > div > #r {
+    position : absolute;
+    top : 0.33cm;
+    left: 0cm;
+}
+
+.input-buttons > div > #u {
+    position : absolute;
+    top : 0cm;
+    left: 0.33cm;
+}
+
+.input-buttons > div > #l {
+    position : absolute;
+    top : 0.33cm;
+    left: 0.66cm;
+}
+
+.input-buttons > div > #d {
+    position : absolute;
+    top : 0.66cm;
+    left: 0.33cm;
+}
+
+.input-buttons > div > #m {
+    position : absolute;
+    top : 0.33cm;
+    left: 0.33cm;
+}
